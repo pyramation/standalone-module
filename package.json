@@ -1,6 +1,6 @@
 {
   "name": "standalone-module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "create standalone modules",
   "keywords": [],
   "main": "dist/standalone-module.js",
