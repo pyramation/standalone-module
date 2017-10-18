@@ -1,4 +1,4 @@
-const transform = require('../src/standalone-module').transform;
+import { transform } from '../src/standalone-module';
 
 describe('transform test', () => {
   it('transform exists', () => {
@@ -10,7 +10,7 @@ describe('transform test', () => {
       modulePath: __dirname + '/fixtures/test-module'
     });
     expect(code).toBeTruthy();
-    expect(eval(code).exports).toEqual({
+    expect(eval(code)).toEqual({
       a: 1,
       b: 'something amazing!'
     });
