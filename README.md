@@ -11,7 +11,10 @@ yarn add standalone-module
 import { transform } from 'standalone-module';
 
 (async ()=>{
-  const code = await transform({modulePath: __dirname + '/path/to/your/module'});
+  const code = await transform({
+    moduleName: 'myawesomemodule', 
+    modulePath: __dirname + '/path/to/your/module'
+  });
 })();
 
 ```
