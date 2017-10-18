@@ -1,21 +1,17 @@
 
-# first run `npm install` in base folder!
+# create standalone modules
 
-
-## steps to reproduce success (using plain javascript)
-
-Navigate into `js/standalone-module` and run tests:
+## Usage
 
 ```sh
-cd js/standalone-module
-npm install
-npm run test
+yarn add standalone-module
 ```
 
-## steps to reproduce failure (using typescript-library-starter)
+```js
+import { transform } from 'standalone-module';
 
-Navigate to the base folder
+(async ()=>{
+  const code = await transform({modulePath: __dirname + '/path/to/your/module'});
+})();
 
-```sh
-npm run test
 ```
