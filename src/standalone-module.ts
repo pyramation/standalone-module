@@ -11,7 +11,7 @@ export const transform = async (
 ) => {
   const { moduleName, modulePath } = options
   const bundle = await rollup({
-    input: modulePath
+    entry: modulePath
   })
   const { code } = await bundle.generate({
     format: 'cjs'

@@ -67,6 +67,7 @@
   "devDependencies": {
     "@types/jest": "^21.1.0",
     "@types/node": "^8.0.0",
+    "@types/rollup": "^0.41.1",
     "colors": "^1.1.2",
     "commitizen": "^2.9.6",
     "coveralls": "^3.0.0",
