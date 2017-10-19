@@ -1,17 +1,20 @@
-const rollup = require('rollup');
+import { rollup } from 'rollup'
 
 export interface ModuleInfo {
-  moduleName: string;
-  modulePath: string;
+  moduleName: string
+  modulePath: string
 }
 
-export const transform = async (options: ModuleInfo, compact: boolean = true) => {
-  const { moduleName, modulePath } = options;
-  const bundle = await rollup.rollup({
+export const transform = async (
+  options: ModuleInfo,
+  compact: boolean = true
+) => {
+  const { moduleName, modulePath } = options
+  const bundle = await rollup({
     input: modulePath
-  });
+  })
   const { code } = await bundle.generate({
     format: 'cjs'
-  });
-  return code;
-};
+  })
+  return code
+}

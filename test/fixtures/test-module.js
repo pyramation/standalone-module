@@ -1,4 +1,4 @@
 module.exports = {
-    a: 1,
-    b: 'something amazing!'
+  a: 1,
+  b: 'something amazing!'
 };
